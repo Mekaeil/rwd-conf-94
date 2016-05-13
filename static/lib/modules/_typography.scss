@@ -1,0 +1,146 @@
+/*============================================================================================*/
+/*---------------------------------------- Typography ----------------------------------------*\
+/*============================================================================================*/
+.head{
+    font-weight : 200;
+    font-size   : 0.85em;
+    font-family : iransans,OpenSans,sans-serif;
+    line-height : 1.4;
+    margin      : 0;
+    &.large{
+        font-size   : 1.4em;
+        @include responsive(phone){
+            font-size: 1.2em;
+        }
+    } 
+    &.medium{
+        font-size   : 1em;
+        @include responsive(768px){
+            font-size  :  0.8em;
+            line-height: 2;
+        }         
+    } 
+    &.small{
+        font-size: 0.75em;
+        @include responsive(phone){
+            line-height : 2;
+            font-size   : 0.65em;
+        }
+    }  
+    &.bold{
+        font-weight : 600;
+    }  
+}//head
+
+.head-type-2{
+    font-family : iransans,OpenSans,sans-serif;
+    font-weight : 600;
+    font-size   : 1.1em;
+    line-height : 2;
+    margin      : 0px 0 0.4em 0;   
+    &.large{
+        font-size   : 1.4em;
+        margin      : 0;
+        @include responsive(phone){
+            font-size: 1em;
+        }        
+    }//large 
+    &.medium{
+        font-size   : 1em;       
+    }//medium 
+    &.small{
+        font-size: 0.8em;
+        line-height: 1.5;
+        margin: 0; 
+    }//small   
+    &.smaller{
+        font-size: 0.6em;
+        line-height: 1.5;
+    }
+    @include responsive(768px){
+        font-size:  0.9em;
+    }
+}//head-type-2
+
+.txtRight{
+    text-align: right;
+}
+.txtLeft{
+    text-align: left;
+}
+.txtCenter{
+    text-align: center;
+}    
+
+.txtParagraph{
+    margin-top : 1em;
+    font-size  : 0.85em;
+    line-height: 1.95; 
+    &.larger{
+        font-size : 1.2em;
+        @include responsive(phone){
+            font-size: 0.75em;
+        }
+    }  
+    &.larg{
+        font-size  : 0.95em;
+    } 
+    &.small{
+        font-size  : 0.75em !important;
+    }
+    &.smaller{
+        font-size  : 0.6em; 
+    }
+    &.bold{
+        font-family: iransans,OpenSans,sans-serif;
+        font-weight : 800; 
+    }
+}//txtParagraph
+
+.listItems li{
+    font-size: 0.85em;
+    line-height: 2.2em;    
+}
+
+.txtBtn{
+    font-size : 1em;
+    padding   : 0.2em 0.5em;
+    &.large{
+        font-size: 1.2em;
+        line-height: 1;
+        padding: 1em 0em;
+    }
+    &.small{
+        font-size : 0.9em;
+    }
+    &.bold{
+        font-family: iransans,OpenSans,sans-serif;
+        font-weight : 800;
+    }
+    &.smaller{
+        font-size: 0.4em;
+    }
+}//txtBtn
+
+.txtSpan{
+    font-size : 0.8em;
+    &.smaller{
+        font-size: 0.5em;
+    }
+    &.small{
+        font-size: 0.65em;
+    }//small
+    &.large{
+        font-size: 0.95em;
+        @include responsive(768px){
+            font-size:  0.8em;
+        }         
+    }//large
+    &.bold{
+        font-weight : bold;
+    }
+}//txtSpan
+
+.OpenSans{
+     font: 1em/1.5 OpenSans, sans-serif;
+}

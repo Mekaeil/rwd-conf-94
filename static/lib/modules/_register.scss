@@ -1,0 +1,60 @@
+/*============================================================================================*/
+/*--------------------------------Register Section HOME PAGE ---------------------------------*\
+/*============================================================================================*/
+.section--register{
+    text-align              : center;
+    color                   : #fff;   
+    position                : relative;
+    padding                 : 0;
+    .fixShowBg{
+        background              : transparent url('../img/bg-parallex.jpg') no-repeat;
+        background-size         : cover;
+        background-position     : 0;   
+        padding                 : 8em 0 !important;     
+        position                : static;
+    }
+    .btn{
+        background    : #fff;
+        color         : $red; 
+        margin        : 0em auto 1em;
+        width         : 75%;
+        z-index: 999;
+        position: relative;
+        @include transition(all 300ms ease);
+        &:hover{
+            background : $red;
+            color      : #fff;
+        }//hover
+    }//btn
+    p{
+        color       : #fff;
+        width       : 95%;
+        margin      : 0 auto;
+        position    : relative;
+        z-index     : 1;
+    }// p.small  
+    &::after{
+        content : "";
+        position :  absolute;
+        top: 0;
+        left: 0;
+        width : 100%;
+        height: 100%;
+        background : rgba(0,0,0,0.5) !important;
+        z-index: 0;
+    } 
+    &::before{
+        content : "";
+        width   : 0;
+        height  : 0;
+        border      : 3em solid transparent;
+        border-top : 3em solid $milk;
+        position   : absolute;
+        top     : 0;
+        left    : 48%;
+        z-index: 1;
+        @include responsive(phone){
+            left : 32%;
+        }
+    }   
+}//section--register

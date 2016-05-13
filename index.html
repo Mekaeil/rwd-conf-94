@@ -1,12 +1,14 @@
 <!--
-
      _ _ _ _____ _____ _____ _____ _____ _____ __      _____ _____ _____ 
     | | | |   __|   __|     |  |  |     |     |  |    |     | __  |   __|
     | | | |__   |__   |   --|     |  |  |  |  |  |__ _|  |  |    -|  |  |
     |_____|_____|_____|_____|__|__|_____|_____|_____|_|_____|__|__|_____|
-
-    (C) 2014 - Sallar Kaboli <sallar.kaboli@gmail.com>
+   
+    (C) 2016 - Mekaeil Andisheh <mekaeil.me@gmail.com>
+    Website for 2st Responsive Design Conference in Iran.
     Web Standards School <wsschool.org>.
+
+    This Theme forked from sallar/rwd-conf-92  by [Sallar Kaboli]
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,360 +22,1159 @@
 
     You should have received a copy of the GNU General Public License along
     with this program; if not, write to the Free Software Foundation, Inc.,
-    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 -->
-<!doctype html>
-<html lang="en">
-<head>
-    <title>اولین همایش تخصصی طراحی واکنش‌گرا</title>
-    <meta charset="UTF-8">
-    <meta name="author" content="Sallar Kaboli">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
 
-    <meta property="og:title" content="اولین همایش تخصصی طراحی واکنش‌گرا"/>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <title>دومین همایش تخصصی طراحی واکنش‌گرا</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="WSSCHOOL.ORG">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <meta property="og:title" content="دومین همایش تخصصی طراحی واکنش‌گرا"/>
     <meta property="og:site_name" content="مدرسه استانداردهای وب"/>
-    <meta property="og:description" content="اولین همایش تخصصی طراحی واکنش‌گرا به منظور معرفی جدیدترین تکنیک‌ها و ابزارهای مورد استفاده در این نوع طراحی از امسال در ایران برگزار می‌شود."/>
+    <meta property="og:description" content="دومین همایش تخصصی طراحی واکنش‌گرا، رویداد تخصصی یک روزه‌ای است که با هدف معرفی روش‌های صحیح متدولوژی‌های طراحی واکنش‌گرا برای طراحان و توسعه‌دهندگان وب برگزار می‌گردد."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="http://conf.wsschool.org/rwd/"/>
     <meta property="og:image" content="http://conf.wsschool.org/rwd/static/img/share.png"/>
-
+    <meta name="keywords" content="طراحی وب,آینده طراحی وب,مدرسه استاندارد های وب,همایش,Front-end,همایش تخصصی طاحی واکنش‌گرا,دومین همایش تخصصی طراحی واکنش‌گرا, responsive design , ریسپانسیو">
+    <meta name="description" content="&#8203;دومین همایش تخصصی طراحی واکنش‌گرا، کاری از مدرسه استانداردهای وب">
+    <meta name="robots" content="index follow">
+    <meta name="copyright" content="2015-2016">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://conf.wsschool.org/rwd/">
+    <meta name="twitter:domain" content="http://conf.wsschool.org/rwd/">
+    <meta name="twitter:title" content="دومین همایش تخصصی طراحی واکنش‌گرا">
+    <meta name="twitter:description" content="&#8203;دومین همایش تخصصی طراحی واکنش‌گرا، رویداد تخصصی یک روزه‌ای است که با هدف معرفی روش‌های صحیح متدولوژی‌های طراحی واکنش‌گرا برای طراحان و توسعه‌دهندگان وب برگزار می‌گردد.">
+    <meta name="twitter:image" content="http://conf.wsschool.org/rwd/static/img/share.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <link rel="icon" type="image/png" href="static/img/fav/fav.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/img/fav/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/img/fav/apple-touch-icon-72x72.png">       
     <link rel="stylesheet" href="static/css/style.css" media="all">
+    <script type="text/javascript" src="static/js/modernizr.custom.79639.js"></script>
+
 </head>
 <body>
-    <header class="masthead">
+
+    <header class="masthead Roya">
         <div class="overlay"></div>
+        <video id="bg_slide" autoplay loop muted>
+          <source src="static/mp4/bg-slider.mp4" type="video/mp4">
+        </video>
+
         <section class="masthead__content">
-            <figure></figure>
-            <h1>اولین همایش تخصصی طراحی واکنش‌گرا</h1>
+            <h1>دومین همایش تخصصی طراحی واکنش‌گرا</h1>
+        </section>
+
+        <section id="Timer">
+            <time class="inline">
+                <span class="days">&infin;</span>
+                <span class="block">روز</span>
+            </time>
+            <time class="inline">
+                <span class="hours">&infin;</span>
+                <span class="block">ساعت</span>
+            </time>
+            <time class="inline">
+                <span class="minutes">&infin;</span>
+                <span class="block">دقیقه</span>
+            </time>
+            <time class="inline">
+                <span class="seconds">&infin;</span>
+                <span class="block">ثانیه</span>
+            </time>
         </section>
         <footer class="masthead__arrow">
-            <h2>۱۴ آذر ۱۳۹۲</h2>
             <a href="#"><i class="fa fa-chevron-circle-down fa-2x"></i></a>
-        </footer>
+        </footer>     
     </header>
 
+
     <!-- Main Wrapper -->
-    <section class="main-wrapper show-side-nav">
-        
-        <!-- Intro -->
-        <section class="section section--intro" id="intro">
+    <section class="main-wrapper">
+        <section class="fixNav">
             <section class="wrapper">
-                
-                <header class="section-header">
-                    <h1>اولین همایش تخصصی طراحی واکنش‌گرا</h1>
-                    <h3>پنجشنبه، ۱۴ آذر ۱۳۹۲.</h3>
-                </header>
-
-                <section class="grid-wrap col-set-one-half tablet-col-set-full">
-                    <article class="grid-col">
-                        <p>حالا که رشد استفاده موبایل‌وب از دسکتاپ پیشی گرفته است، طراح‌ها و توسعه‌دهندگان وب با مشکلات فراوانی مواجه شده‌اند تا بتوانند طرح‌هایشان را با تمام دستگاه‌های جدید و مختلف سازگار کنند. اما می‌شود این مشکلات را کنترل کرد.</p>
-                        <p>اولین همایش تخصصی طراحی واکنش‌گرا به منظور معرفی جدیدترین تکنیک‌ها و ابزارهای مورد استفاده در این نوع طراحی از امسال در ایران برگزار می‌شود.</p>
-                        <a href="http://myevent.ir/rwd1_conf" target="_blank" class="btn"><i class="fa fa-ticket"></i> ثبت‌نام در همایش</a>
-                        <p class="small"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;هزینه شرکت در همایش هر نفر ۸۰ هزار تومان و هزینه شرکت به صورت آنلاین ۴۰ هزار تومان است.</p>
-                    </article>
-                    <article class="grid-col">
-                        <figure class="showcase"></figure>
-                    </article>
-                </section>
-                <section class="social">
-                    <p><i class="fa fa-twitter"></i> از هش‌تگ <span class="hash"><a href="https://twitter.com/intent/tweet?hashtags=RWDConf92&amp;via=wsschool_org" target="_blank">#RWDConf92</a></span> در شبکه‌های اجتماعی استفاده کنید.</p>
-                </section>
-
+                <nav class="navbar mobile">
+                    <span id="NavMobile" class="hamberger">
+                        <i class="fa fa-align-justify"></i>
+                    </span>
+                    <ul>
+                        <li class="item--nav register">
+                            <a href="#register"  class="txtSpan medium bold">ثبت نام</a>
+                        </li>
+                        <li class="item--nav"><a href="#intro" class="txtSpan medium bold">معرفی</a></li>
+                        <li class="item--nav"><a href="#speakers"  class="txtSpan medium bold">سخنرانان</a></li>
+                        <li class="item--nav"><a href="#schedule"  class="txtSpan medium bold">برنامه برگزاری</a></li>
+                        <li class="item--nav"><a href="#location"  class="txtSpan medium bold">مکان برگزاری</a></li>
+                        <li class="item--nav"><a href="#sponsors"  class="txtSpan medium bold">حامیان ما</a></li>
+                        <li class="item--nav"><a href="#organizers"  class="txtSpan medium bold">برگزارکنندگان</a></li>
+                    </ul>
+                </nav>
             </section>
         </section>
-        <svg class="bigTriangle white-to-gray" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-            <path d="M0 0 L50 100 L100 0 Z" />
-        </svg>
+        <!-- Intro -->
+        <section class="section--intro" id="intro">
+
+            <div class="HeadIntro">
+                <section class="wrapper">
+                    <header class="section-header col-set-one-half tablet-col-set-half phone-col-set-full">
+                        <section class="grid-col" style="text-align:right;">
+                            <div>
+                                <h2 class="head-type-2 txtRight">دومین همایش تخصصی طراحی واکنش‌گرا</h2>
+                                <h3 class="head txtRight">پنجشنبه، ۳ دی ۱۳۹۴</h3>
+                                <p class="txtParagraph">
+                                    همایش تخصصی <span class="dataDesc" data-description="Responsive Design">طراحی واکنش‌گرا </span> با هدف معرفی متدهای جدید و روش‌های صحیح طراحی واکنش‌گرا برای طراحان و توسعه‌دهندگان وب برگزار می‌شود.<br> 
+                                    طبق <span class="dataDesc" data-description="trend">روند</span>های جهانی طراحی واکنش‌گرا در سال جاری و سال آینده، یکی از مهمترین مباحثی که می‌بایست به آن توجه داشت طراحی بهینه و بازدهی بالای صفحات است که در این رویداد به این موضوع می‌پردازیم.                                        
+                                </p>                             
+                            </div>   
+                            <section>
+                                <h2 class="head-type-2 txtRight">چرا باید در این همایش شرکت کنیم؟</h2>
+                                <ul class="listAdvantage txtRight listItems">
+                                    <li class="item">یادگیری اصول طراحی و توسعه واکنش‌گرا</li>
+                                    <li class="item">همگام شدن با <span class="dataDesc" data-description="trend">روند</span>های جهانی</li>
+                                    <li class="item">تغییر نگرش نسبت به طراحی واکنش‌گرا</li>
+                                    <li class="item">شبکه‌سازی و ارتباط با متخصصین این حوزه</li>
+                                    <li class="item">آشنایی با فرصت‌های شغلی</li>
+                                    <li class="item">دريافت گواهی شركت در همايش</li>
+                                    <li class="item">يك روز خوش همراه با يادگيری</li>
+                                </ul>                             
+                            </section>                                           
+                        </section>
+                        <section class="grid-col adsPoster">
+                            <figure>
+                                <img src="static/img/poster-intro.jpg" alt="">
+                            </figure>
+                        </section>
+                    </header>
+                </section>
+            </div>
+
+            <svg class="bigTriangle white-to-gray" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+                <path d="M0 0 L50 100 L100 0 Z" />
+            </svg>
+
+            <section class="section wrapper" id="advantages">
+                <section class="grid-wrap section--advantage col-set-one-third tablet-col-set-full">
+                    <article class="grid-col advantage">
+                        <header>
+                            <i class="fa ico svg-css"></i>
+                            <h3 class="head small bold">استایل‌نویسی منطقی</h3>
+                        </header>
+                        <p class="txtParagraph small">نوشتن کدهای استایل صفحه لزوما نباید در فایل خارجی باشد و برای بهینه بودن صفحه بعضی اوقات لازم است کدهای استایل را به صورت اینلاین در صفحه بنویسیم.</p>
+                    </article>
+                    <article class="grid-col advantage">
+                        <header>
+                            <i class="fa ico svg-typography"></i>                       
+                            <h3 class="head small bold">اصول <span class="dataDesc " data-description="Typography">تایپوگرافی</span></h3>
+                        </header>
+                        <p class="txtParagraph small">اصلی‌ترین سرمایه‌ی وب‌سایت محتوای آن است که با هماهنگ کردن آن با دستگاه‌های متفاوت در سایزهای مختلف می‌توان حس خوشایندی را به کاربر منتقل کرد.</p>
+                    </article>
+                    <article class="grid-col advantage">
+                        <header>
+                            <i class="fa ico svg-nav"></i>                            
+                            <h3 class="head small bold"><span class="dataDesc" data-description="Navigation Patterns">الگوهای نویگیشن‌</span></h3>
+                        </header>
+                        <p class="txtParagraph small">الگوهای نویگیشن‌ در طراحی واکنش‌گرا موضوع بسیار مهمی است که معمولا فراموش می‌شود در حالی که رعایت آن باعث دسترسی بهتر کاربر می‌شود.</p>
+                    </article>                    
+                </section>
+                <section class="grid-wrap section--advantage col-set-one-third tablet-col-set-full">
+                    <article class="grid-col advantage">
+                        <header>
+                            <i class="fa ico svg-think"></i>                            
+                            <h3 class="head small bold">تفکر <span class="dataDesc" data-description="Responsive">واکنش‌گرا</span></h3>
+                        </header>
+                        <p class="txtParagraph small">در صورتیکه مفهوم تکنولوژی‌های موبایل و وب مدرن را به درستی درک کنیم علاوه بر اینکه طراحی واکنش‌گرا می‌تواند بسیار مفید باشد، طراحی آن نیز بسیار راحت خواهد بود.</p>
+                    </article>
+                    <article class="grid-col advantage">
+                        <header>
+                            <i class="fa ico svg-idea"></i>                            
+                            <h3 class="head small bold">باورهای نادرست</h3>
+                        </header>
+                        <p class="txtParagraph small">متکی بودن به فریم‌ورک‌ها و صرفا استفاده از مدیاکوئری ها، علاوه بر طولانی شدن و بهینه نبودن کدها به محتوا و چیدمان که مهمترین اصل در وب‌سایت است لطمه وارد می‌کند.</p>
+                    </article>
+                    <article class="grid-col advantage">
+                        <header>
+                            <i class="fa ico svg-strategy"></i>
+                            <h3 class="head small bold">استراتژی‌های طراحی</h3>
+                        </header>
+                        <p class="txtParagraph small small">قبل از شروع به طراحی واکنش‌گرا مشخص کردن زاویه‌ی دید کاربران و انتظاراتی که آنها از وب‌سایت دارند باعث می‌شود طراحی ما علاوه بر زیبایی، جامع و همه‌گیر نیز باشد.</p>
+                    </article>                                                        
+                </section>
+            </section>
+
+        </section>
         <!-- /Intro -->
+
+        <!-- Register -->
+        <section class="section section--register" id="register">
+            <div class="fixShowBg">
+                <section class="wrapper">
+                    <section class="grid-wrap tablet-col-set-full" style="margin:0 auto;">
+                        <a href="http://conf.wsschool.org/rwd/register/" class="txtBtn large btn bold"><i class="fa fa-ticket"></i> ثبت‌نام در همایش</a>
+                        <p class="txtParagraph large bold"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;هزینه شرکت در همایش تا قبل از ۲۰ آذر مبلغ <span class="bold">۶۰</span> هزار تومان و بعد از آن <span class="bold">۸۰</span> هزار تومان می‌باشد.</p>
+                    </section>
+                </section>                 
+            </div>
+        </section>
+        <!-- /Register -->
+
+        <!-- Social -->
+        <section class="section section--social" id="social">
+            <section class="social">
+                <section class="wrapper">
+                    <ul class="socialList"> 
+                        <span class="hashTag txtSpan smaller bold">
+                            از هش‌تگ  <span class="hash"><a href="https://twitter.com/intent/tweet?hashtags=RWDConf94&amp;via=wsschool_org" class="OpenSans" target="_blank">#RWDConf94</a></span>در شبکه‌های اجتماعی استفاده کنید.
+                        </span>                        
+                        <li>
+                            <a href="https://www.linkedin.com/company/web-standards-school" class="social--linkedin" target="_blank"> 
+                                <i class="fa fa-linkedin"></i>
+                                <span class="nameSocial">لینکدین</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://facebook.com/wsschool" class="social--facebook" target="_blank"> 
+                                <i class="fa fa-facebook"></i>
+                                <span class="nameSocial">فیس بوک</span>
+                            </a>
+                        </li>
+                        <li class="social--twitter" data-twitter2="از هش‌تگ #RWDConf94 در شبکه‌های اجتماعی استفاده کنید.">                            
+                            <a href="https://twitter.com/intent/tweet?hashtags=RWD94&amp;via=wsschool_org" target="_blank"> 
+                                <i class="fa fa-twitter hasColor"></i>
+                                <span class="nameSocial">توییتر</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://instagram.com/wsschool_org" class="social--instagram" target="_blank"> 
+                                <i class="fa fa-instagram"></i>
+                                <span class="nameSocial">اینستاگرام</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.aparat.com/wsschool" class="social--aparat" target="_blank"> 
+                                <i class="fa ico svg-aparat"></i>
+                                <span class="nameSocial">آپارات</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <section class="wrapper">
+                        <section class="telegram">
+                            <div class="innerTelegram">
+                                <a href="http://telegram.me/wsschool" class="btn telegram txtBtn smaller bold" target="_blank">
+                                    <i class="fa ico svg-telegram"></i>
+                                    به کانال تلگرام مدرسه استانداردهای وب بپیوندید.
+                                </a>
+                            </div>
+                        </section>      
+                    </section>                       
+                </section>
+            </section>            
+        </section>       
+        <!-- /Social -->
 
         <!-- People -->
         <section class="section section--people" id="speakers">
             <section class="wrapper">
                 
-                <header class="section-header">
-                    <h1><i class="fa fa-microphone"></i> سخنران‌ها</h1>
-                    <h3>چه کسانی در همایش طراحی واکنش‌گرا با شما خواهند بود؟</h3>
+                <header class="section-header border--bottom">
+                    <h1 class="head-type-2 large txtCenter"><i class="fa fa-microphone"></i> سخنران‌ها</h1>
+                    <h3 class="head medium txtCenter">چه کسانی در همایش طراحی واکنش‌گرا با شما خواهند بود؟</h3>
                 </header>
-
-                <section class="grid-wrap col-set-one-third tablet-col-set-one-half phone-col-set-full">
-                    <a href="http://ir.linkedin.com/in/parhamb" class="grid-col" target="_blank">
-                        <img src="static/img/people/parham.jpg" alt="پرهام باغستانی">
-                        <h2>پرهام باغستانی</h2>
-                        <h3>طراح تجربه کاربری</h3>
-                    </a>
-                    <a href="http://ir.linkedin.com/pub/amir-abbas-abdolali/37/196/337" class="grid-col" target="_blank">
-                        <img src="static/img/people/amirabbas.jpg" alt="سالار کابلی">
-                        <h2>امیرعباس عبدالعلی</h2>
-                        <h3>طراح و توسعه‌دهنده وب</h3>
-                    </a>
-                    <a href="http://ir.linkedin.com/pub/arash-milani/64/140/3bb" class="grid-col" target="_blank">
-                        <img src="static/img/people/arash.jpg" alt="آرش میلانی">
-                        <h2>آرش میلانی</h2>
-                        <h3>طراح و توسعه‌دهنده وب</h3>
-                    </a>
-                    <a href="http://amirsorouri.com" class="grid-col" target="_blank">
-                        <img src="static/img/people/amir.jpg" alt="امیر سروری">
-                        <h2>امیر سروری</h2>
-                        <h3>طراح رابط کاربری</h3>
-                    </a>
-                    <a href="http://ir.linkedin.com/in/mohsenbarati" class="grid-col" target="_blank">
-                        <img src="static/img/people/mohsen.jpg" alt="محسن براتی">
-                        <h2>محسن براتی</h2>
-                        <h3>توسعه‌دهنده وب و موبایل</h3>
-                    </a>
-                    <a href="http://ir.linkedin.com/in/shaho" class="grid-col" target="_blank">
-                        <img src="static/img/people/shaho.jpg" alt="شاهو طوفانی">
-                        <h2>شاهو طوفانی</h2>
-                        <h3>طراح و توسعه‌دهنده وب</h3>
-                    </a>
+ 
+                <section class="grid-wrap people--introduce col-set-full tablet-col-set-full phone-col-set-full">
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/soheil.jpg" alt="سهیل علوی">
+                            <figcaption>                              
+                                <span class="social">
+                                     <a href="https://ir.linkedin.com/in/soh3il" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a>
+                                     <a href="https://twitter.com/soh3il" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>                                 
+                                </span>                                
+                            </figcaption>
+                        </figure> 
+                        <h3 class="head-type-2 medium">سهیل علوی</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="Co-Founder and CEO at Reyhoon">هم-بنیان‌گذار و مدیرعامل ریحون</span></h4>                           
+                        <p class="intro txtParagraph">
+                            طراح و توسعه دهنده‌ی فرانت اند است و تجربه ۴ استارتاپ موفق و جذب سرمایه بیش از ۱۰ میلیون دلار در کشور های چین، کانادا، آمریکا و ایران را دارد. آخرین استارتاپ او توسط بزرگترین شرکت سرگرمی (SFX Entertainment) در نیویورک خریداری شده است، سهیل پس از فوت پدرش به ایران بازگشت و بعد از مشاهده پیشرفت کشور در زمینه‌ی شرکت‌های مبتنی بر تکنولوژی، تصمیم به بنیان‌گذاری شرکت ریحون گرفت.
+                        </p>
+                    </article> 
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/farid.jpg" alt="فرید ارض پیما">
+                            <figcaption>                              
+                                <span class="social">
+                                     <a href="https://ir.linkedin.com/in/faridarzpeyma" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a>
+                                     <a href="https://twitter.com/FaridArzpeyma" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>                                 
+                                </span>                                
+                            </figcaption>
+                        </figure> 
+                        <h3 class="head-type-2 medium">فرید ارض پیما</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="Co-founder & Product Manager at Atitel">هم‌-بنیان‌گذار و مدیر محصول در آتی‌تل</span>
+                            </h4>                           
+                        <p class="intro txtParagraph">
+                            عاشق حیوانات و جاوااسکریپت است هرچند وی به زبان برنامه‌نویسی خاصی وابستگی ندارد. اگر قرار باشد محصولات با بالاترین کیفیت‌ به مشتری تحویل داده شوند، لازم است در کار سخت‌گیر باشد گرچه این سخت‌گیری با گپ‌های لذت‌بخش در مورد موضوعات پایه‌ای علم و تکنولوژی فراموش خواهد شد. فرید این سال‌ها از پیش‌برندگان شرکت آتی‌تل و مدیر محصولات این شرکت است.
+                        </p>
+                    </article> 
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/kazem.jpg" alt="کاظم کشاورز">
+                            <figcaption>
+                             
+                                <span class="social">
+                                     <a href="https://www.linkedin.com/in/keykakito" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a>
+                                     <!-- <a href="#" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>     -->                             
+                                </span>                                
+                            </figcaption>
+                        </figure>
+                        <h3 class="head-type-2 medium">کاظم کشاورز</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="Web Developer">توسعه دهنده‌ی وب</span></h4>  
+                        <p class="intro txtParagraph">
+                            یکی از موسسین تسکولو، توسعه‌ دهنده‌ی وب و رابط‌کاربری و توسعه‌ دهنده جاوااسکریپت نینجا می‌باشد.
+                        </p>
+                    </article>                     
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/mohsen.jpg" alt="محسن حسینیان">
+                            <figcaption>
+                                <span class="social">
+                                     <a href="http://ir.linkedin.com/in/hosseinian" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a>
+                                     <a href="http://twitter.com/imohsenet" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>                                 
+                                </span>                                
+                            </figcaption>
+                        </figure>
+                        <h3 class="head-type-2 medium">محسن حسینیان</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="UI and web developer">رابط‌کاربری و توسعه دهنده‌ی وب</span></h4>  
+                        <p class="intro txtParagraph">
+                           هفت سال در زمینه فری‌لنسری کار کرده و به مدت سه سال است که بعنوان طراح ارشد تیم برنامه نویسی فعالیت دارد. همراه با تیم فاندرزبادی (روباکو ی سابق) مشغول کار روی توسعه چندین پروژه از جمله پروژه‌ی اپفورال می‌باشد. 
+                        </p>
+                    </article>
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/arash.jpg" alt="آرش منطقی">
+                            <figcaption>                              
+                                <span class="social">
+                                     <a href="https://www.linkedin.com/in/arashmanteghi" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a>
+                                     <a href="https://twitter.com/ArashManteghi" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>                                 
+                                </span>                                
+                            </figcaption>
+                        </figure> 
+                        <h3 class="head-type-2 medium">آرش منطقی</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="Designer and Web Developer">طراح و توسعه دهنده‌ی وب</span></h4>                           
+                        <p class="intro txtParagraph">
+                            آرش نویسنده کتابخانه <span class="dataDesc" data-description="simptip">سیمپ‌تیپ</span> است که بعد از مشارکت در استارتاپ <span class="dataDesc" data-description="Eventorial">ایونتوریال</span> به عنوان توسعه‌دهنده فرانت‌اند، بلاگ مینی فید را تأسیس کرد و در حال حاضر به عنوان فیریلنسر مشغول به کار است.
+                        </p>
+                    </article>                                                                                       
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/siamak.jpg" alt="سیامک مختاری">
+                            <figcaption>                              
+                                <span class="social">
+                                     <a href="https://www.linkedin.com/in/siamakmokhtari" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a>
+                                     <a href="http://twitter.com/sia_mac" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>                                 
+                                </span>                                
+                            </figcaption>
+                        </figure> 
+                        <h3 class="head-type-2 medium">سیامک مختاری</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="Senior Front–End Developer & Design">طراح و توسعه‌ دهنده‌ی فرانت‌اند</span></h4>                           
+                        <p class="intro txtParagraph">
+                            سازنده پکیج <span class="dataDesc" data-description="Licon">لیکون</span> و طراح وب‌سایت اولین همایش آینده طراحی وب. او سابقه کار در شرکت‌های نت‌برگ، آبانگان و کلیک‌یاب را دارد و در حال حاضر در زرین‌پال توسعه‌دهنده ارشد فرانت‌اند است.
+                        </p>
+                    </article>                    
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/naser.jpg" alt="سید ناصر حسنی">
+                            <figcaption>                              
+                                <span class="social">
+                                     <a href="https://ir.linkedin.com/in/naser-hasani-34019879" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a>
+                                     <a href="https://twitter.com/snhasani" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>                                 
+                                </span>                                
+                            </figcaption>
+                        </figure> 
+                        <h3 class="head-type-2 medium">سید ناصر حسنی</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="Designer and Web Developer">طراح و توسعه دهنده‌ی وب</span></h4>                  
+                        <p class="intro txtParagraph">
+                            فارغ‌التحصیل رشته‌ی مهندسی نرم افزار است که سابقا توسعه دهنده‌ی بک‌اند بوده و برروی الگوریتم‌های رباتیک و هوش‌مصنوعی کار می‌کرده است. پس از آن در زمینه‌ی فرانت‌اند کار کرده و طراحی وب را با دقت مهندسی ترکیب کرده تا وب‌سایت‌هایی زیباتر و با سرعت اجرای بالاتری حاصل شود. ناصر در سال‌های اخیر در این زمینه به صورت فریلنسر فعالیت داشته است.
+                        </p>
+                    </article>                    
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/masoud.jpg" alt="مسعود صدری">
+                            <figcaption>                              
+                                <span class="social">
+                                     <a href="https://ir.linkedin.com/in/masoodsadri" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a>
+                                     <a href="https://twitter.com/MasoodSadri" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>                                 
+                                </span>                                
+                            </figcaption>
+                        </figure> 
+                        <h3 class="head-type-2 medium">مسعود صدری</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="UI Developer">توسعه دهنده‌ی رابط‌کاربری</span></h4>                    
+                        <p class="intro txtParagraph">
+                            دانش آموخته‌ی رشته مهندسی نرم افزار که از سال ۸۷ بطور جدی کار برنامه نویسی را آغاز کرده و همواره به عنوان یک توسعه دهنده فعالیت داشته، وی با چندین تیم و شرکت نرم افزاری همکاری داشته و در حال حاضر توسعه دهنده رابط کاربری می‌باشد که سعی در به اشتراک‌گذاری مطالب آموخته شده از طریق کارگاهها و وبلاگ شخصی خودش دارد.
+                        </p>
+                    </article>
+                    <article class="grid-col introduce--item">
+                        <figure>
+                            <img src="static/img/people/saeid.jpg" alt="سعید علیپور">
+                            <figcaption>
+                             
+                                <span class="social">
+                                       <a href="https://ir.linkedin.com/in/saeedalipoor" class="social--btn social--linkedin" target="_blank">
+                                         <i class="fa fa-linkedin"></i>
+                                     </a> 
+                                     <a href="https://twitter.com/saeednitrate" class="social--btn social--twitter" target="_blank">
+                                         <i class="fa fa-twitter"></i>
+                                     </a>                                
+                                </span>                                
+                            </figcaption>
+                        </figure>
+                        <h3 class="head-type-2 medium">سعید علیپور</h3>
+                        <h4 class="head small"><span class="dataDesc" data-description="Designer and Web Developer">طراح و توسعه‌ دهنده‌ی وب</span></h4>  
+                        <p class="intro txtParagraph">
+                           مجموعه <span class="dataDesc" data-description="ICONO">آیکونو</span> از کارهای اوست، از اعضای اصلی <span class="dataDesc" data-description="filecorn">تیم ذرت</span> است و همچنین در تیم رابط‌کاربری پرشین‌گیگ نیز حضور دارد و برای ظاهری زیبا و کاربرپسند در وب‌سایت‌ها و برنامه‌های تحت‌وب تلاش می‌کند.
+                        </p>
+                    </article>
                 </section>
 
             </section>
         </section>
+
         <svg class="bigTriangle gray-to-white" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
             <path d="M0 0 L50 100 L100 0 Z" />
         </svg>
         <!-- /People -->
 
         <!-- Schedule -->
-        <section class="section section--schedule" id="schedule">
+        <section class="section section--timeLine" id="schedule">
             <section class="wrapper">
-                
-                <header class="section-header">
-                    <h1><i class="fa fa-calendar-o"></i> برنامه برگزاری</h1>
-                    <h3>یک روز با طراحی واکنش‌گرا</h3>
+
+                <header class="section-header border--bottom">
+                    <h1 class="head-type-2 large txtCenter"><i class="fa fa-calendar-o"></i> برنامه برگزاری</h1>
+                    <h3 class="head medium txtCenter">یک روز با طراحی واکنش‌گرا</h3>
                 </header>
 
-                <section class="schedule">
-                    <article class="schedule__row">
-                        <aside>۰۸:۰۰ - ۰۸:۳۰</aside>
-                        <section class="dim">
-                            <h3>پذیرش</h3>
+                <section class="timeLine">
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img class="iconTimeline" src="static/img/schedule/login.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۰۸:۰۰ - ۰۸:۳۰</span>
+                                <h4 class="head-type-2 smaller bold">پذیرش</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">
+                                <h3 class="head txtRight">پذیرش و ورود به سالن برگزاری.</h3>
+                                <p class="txtParagraph small">با ارائه ی مشخصات خود وارد سالن برگزاری شوید</p>
+                            </div>
+                        </section>
+                    </article>                                           
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/schedule/coffee.jpg" class="iconTimeline" alt="">
+                            <aside>
+                                <span class="txtSpan">۰۸:۳۰ - ۰۹:۰۰</span>
+                                <h4 class="head-type-2 smaller bold">پذیرایی</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">
+                                <h3 class="head txtRight">صرف صبحانه</h3>
+                                <p class="txtParagraph small">از خوردن صبحانه در کنار چهره های جدید و متخصص لذت ببرید ;)</p>
+                            </div>
+                        </section>
+                    </article>                                        
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/schedule/flag.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۰۹:۰۰ - ۰۹:۳۰</span>
+                                <h4 class="head-type-2 smaller bold">افتتاحیه</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">
+                                <h3 class="head txtRight">مراسم افتتاحیه</h3>
+                                <p class="txtParagraph small">سرود جمهوری اسلامی ایران و تلاوت آیاتی از قرآن مجید.</p>
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۰۸:۳۰ - ۰۹:۰۰</aside>
-                        <section class="dim">
-                            <h3>پذیرایی</h3>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/majid.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۰۹:۳۰ - ۰۹:۴۵</span>
+                                <h4 class="head-type-2 smaller bold">مجید علوی‌زاده</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">
+                                <h3 class="head txtRight">سخنرانی دبیر همایش</h3>
+                                <p class="txtParagraph small"></p>
+                            </div>
+                        </section>
+                    </article>   
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/soheil.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۰۹:۴۵ - ۱۰:۱۵</span>
+                                <h4 class="head-type-2 smaller bold">سهیل علوی</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight">good design is less design</h3>
+                                <p class="txtParagraph small">
+                                    این روزها پیشنهاد می‌شود طراحی صفحات وب را ابتدا برای نمایشگرهای کوچکتر شروع کنیم، در این ارائه قصد داریم دلیل این موضوع و تاثیر استفاده ی آن در زندگی روزمره را بررسی کنیم.
+                                </p>
+                                <a href="http://www.slideshare.net/WSSchool/good-design-is-less-design-56467260" class="btn-dl txtParagraph small" target="_blank">
+                                    <i class="fa fa-download"></i>نمایش ارائه
+                                </a>                                 
+                            </div>
+                        </section>
+                    </article> 
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/siamak.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۰:۱۵ - ۱۰:۴۵</span>
+                                <h4 class="head-type-2 smaller bold">سیامک مختاری</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight"><span class="dataDesc" data-description="Typography">تایپوگرافی</span> اصولی در وب</h3>
+                                <p class="txtParagraph small">
+                                    تایپوگرافی نه تنها شامل اطلاعات نوشتاری می‌باشد، بلکه <span class="dataDesc" data-description="Guideline">خطوط الگو</span> در ترکیب‌بندی یا گریدبندی یک طرح را نیز در بر می‌گیرد. ترکیب‌بندی درست و متناسب با محتوا مورد نظر، می‌تواند ساختار یک اثر را به شکلی در آورد که کاربر روی آن‌ تمرکز نموده و آن‌را کشف کند. تایپوگرافی تنها مخصوص سایت‌های محتوا محور نیست. بلکه تمامی سایت‌ها باید تایپوگرافی اصولی و زیبا داشته باشند تا کاربران به راحتی به‌توانند با آن در تماس برقرار کنند. نسبت‌ها در تایپوگرافی انواع و اقسام دارد که در این ارائه من درباره‌ی <span class="dataDesc" data-description="Golden Ratio">نسبت طلایی</span> صحبت خواهم کرد.
+                                </p>
+                                <a href="http://www.slideshare.net/siamakmokhtari75/typography-56439928" class="btn-dl txtParagraph small" target="_blank">
+                                    <i class="fa fa-download"></i>نمایش ارائه
+                                </a>                                   
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۰۹:۰۰ - ۰۹:۳۰</aside>
-                        <section>
-                            <h3>سخنان آغازین</h3>
-                            <h4>مجید علوی‌زاده</h4>
-                            <p>اکنون که تولید سایتها و نرم افزارهای وب به خارج از دسکتاپ رسیده و رشد استفاده موبایل‌وب نیز روز به روز از استفاده دسکتاپ بیشتر می شود، طراحان و توسعه دهندگان وب با مشکلات فراوانی در این خصوص مواجه شده اند. یکی از دغدغه های طراحان و توسعه دهندگان وب، سازگاری طرح‌هایشان با دستگاه های جدید و مختلف است. اما با رعایت اصول و استانداردهای طراحی وب واکنش‌گرا می‌توان این مشکلات و دغدغه ها را کنترل و از بین برد.</p>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/kazemi.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۰:۴۵ - ۱۱:۰۰</span>
+                                <h4 class="head-type-2 smaller bold">علی کاظمی</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">
+                                <h3 class="head txtRight">نظام بصری موزون در طراحی واکنش‌گرا</h3>
+                                <p class="txtParagraph small">   
+                                در طراحی وب‌سایت پنج عنصر اصلی داریم که شامل:"رنگ، فونت، فرم، تصویر و گرید" می‌باشد. وقتی یک وب‌سایت واکنش‌گرا طراحی می شود؛ در واقع قرار است چیدمان در دستگاه‌ها و  صفحه نمایش‌های مختلف تغییر کند. بنابراین یکی از اصلی ترین عناصر طراحی شده ما، تغییر شکل خواهد داشت. سوال اینجاست:" حالا که نظام بصری طرح با تغییر چیدمان عوض شده، چطور کاربر احساس آشنایی قبلی به سایت را از دست ندهد؟"                     
+                                </p>                           
+                            </div>
+                        </section>
+                    </article> 
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img class="iconTimeline" src="static/img/schedule/coffee.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۱:۰۰ - ۱۱:۳۰</span>
+                                <h4 class="head-type-2 smaller bold">استراحت</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight">استراحت و پذیرایی</h3>
+                                <p class="txtParagraph small">نسکافه و چای میل کنید تا برای ادامه ی همایش  انرژی کافی داشته باشید. ;)</p>
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۰۹:۳۰ - ۱۰:۱۵</aside>
-                        <section>
-                            <h3>طراحی موبایل اپلیکیشن برای دستگاه‌های مختلف با استفاده از <span>Media Query</span></h3>
-                            <h4>محسن براتی</h4>
-                            <p>اگر قصد طراحی صفحات وب برای نمایش در تلفن های همراه هوشمند یا تبلت ها را دارید پیش از هرچیز نیاز به دانستن اطلاعات صحیحی در مورد محدودیت ها، ابعاد و قابلیت های دستگاه های مورد نظر خود برای خروجی را خواهید داشت، در این ارائه سعی خواهد شد تا اصول و استانداردهای طراحی برای پلتفرم موبایل بصورت عملی و همراه با مثال و نمونه های اجرایی مطرح گردد.</p>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/mohsen.jpg" alt="">
+
+                            <aside>
+                                <span class="txtSpan">۱۱:۳۰ - ۱۲:۰۰</span>
+                                <h4 class="head-type-2 smaller bold">محسن حسینیان </h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight"><span class="dataDesc" data-description="Navigation">نویگیشن‌</span> در طراحی <span class="dataDesc" data-description="Responsive">واکنش‌گرا</span></h3>
+                                <p class="txtParagraph small">
+                                ممکن است شما هم با من هم عقیده باشید که طراحی واکنش‌گرا برخلاف ظاهر دوست داشتنی و منعطف‌اش، حاوی چالش های پنهانی نهفته‌ای است که گاهی دردآور است و روند اجرای کار را کند می کند. در مقابل این چالش‌ها بجای اینکه به اختراع دوباره چرخ فکر کنیم؛ کافی است نگاهی به الگوهای حاضر بیاندازیم. نویگیشن‌ها یکی از این چالش‌های موجود است. در این ارائه به تعیین اولویت‌ها و ترتیب محتوا که مهم ترین بخش تصمیم گیری در واکنش‌گرا کردن نویگیشن‌ها ست، خواهیم پرداخت. همینطور نقش همبرگرمنو، مزایا و معایب استفاده از آن را شرح می دهیم. در بخش دیگر به بررسی تجربه کاربری نویگیشن‌ها در طراحی واکنش‌گرا پرداخته و در انتها جدیدترین الگوهای نویگیشن‌ در طراحی واکنش‌گرا را معرفی می‌کنیم.
+                                </p>
+                                <a href="http://www.slideshare.net/MohsenHosseinian1/responsive-navigation-patterns" class="btn-dl txtParagraph small" target="_blank">
+                                    <i class="fa fa-download"></i>نمایش ارائه
+                                </a>                                
+                            </div>
+                        </section>
+                    </article> 
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/masoud.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۲:۰۰ - ۱۲:۳۰</span>
+                                <h4 class="head-type-2 smaller bold">مسعود صدری</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">
+                                <h3 class="head txtRight">تفکر <span class="dataDesc" data-description="Responsive">واکنش‌گرا</span> و ارتباط آن با مشتریان یک سیستم</h3>
+                                <p class="txtParagraph small">
+                                    با پررنگ‌تر شدن نقش تلفن‌های هوشمند و تبلت‌ها در زندگی و کارهای روزمره نیاز به واکنش‌گرا بودن رابط کاربری یک وب‌سایت یا نرم افزار به مراتب بیشتر از قبل احساس می‌شود، همین طور طراحی واکنش‌گرا به عنوان یکی از امتیازهای سئو برای گوگل محسوب شده و سیستم ما را به استانداردهای جهانی نزدیک‌تر می‌کند. اما موضوع بسیار مهمی که برای اغلب کسب‌ و‌ کارها وجود دارد، ارتباط صحیح و راحت یک کاربر با وب‌سایت و نرم‌افزار آن شرکت یا سازمان می‌باشد. اولین گام جهت پیشرفت در مسیر توسعه کسب‌ و‌ کار زمانی برداشته می‌شود که کاربران یک سیستم با درک این استانداردها متوجه شوند که وقت و نوع نگرش آنها در نظر گرفته شده و می‌توانند برای استفاده از محصولات یک سیستم، ابزارهای مختلفی را امتحان کنند. 
+                                </p>
+                                <a href="http://www.slideshare.net/WSSchool/ss-56467283" class="btn-dl txtParagraph small" target="_blank">
+                                    <i class="fa fa-download"></i>نمایش ارائه
+                                </a> 
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۱۰:۱۵ - ۱۰:۴۵</aside>
-                        <section>
-                            <h3>استفاده از <span>CSS Preprocessor</span> ها برای طراحی واکنش‌گرا</h3>
-                            <h4>امیرعباس عبدالعلی</h4>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/saeid.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۲:۳۰ - ۱۳:۰۰</span>
+                                <h4 class="head-type-2 smaller bold">سعید علیپور</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">
+                                <h3 class="head txtRight">بهبود تجربه‌ی کاربری در طراحی واکنش‌گرا</h3>
+                                <p class="txtParagraph small">
+                                    ابزارها و متدهای جدید برای هرچه سیال‌کردن صفحات وب و نمایش بهتر آن‌ها روی اندازه‌های مختلف نمایشگر‌ها منتشر شده و می‌شوند، اما چه خوب است که به تجربه‌ی کاربر بعد از بارگذاری صفحه و هنگام کار با صفحه (مخصوصا در برنامه‌های تحت وب) نیز توجه کنیم. با هم چند نکته برای بهبود یک سایت واکنش‌گرا و ایجاد یک تجربه‌بهتر را مرور خواهیم کرد.                     
+                                </p> 
+                                <a href="http://www.slideshare.net/WSSchool/ss-56467338" class="btn-dl txtParagraph small" target="_blank">
+                                    <i class="fa fa-download"></i>نمایش ارائه
+                                </a>                                                               
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۱۰:۴۵ - ۱۱:۰۰</aside>
-                        <section class="dim">
-                            <h3>استراحت</h3>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img class="iconTimeline" src="static/img/schedule/lunch.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan"> ۱۳:۰۰ - ۱۴:۰۰</span>
+                                <h4 class="head-type-2 smaller bold">ناهار</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">
+                                <h3 class="head txtRight">ناهار ، نماز و استراحت</h3>
+                                <p class="txtParagraph small">ناهاری دلچسب همراه دوستان و متخصصان وب، لذت ببرید ;)</p>
+
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۱۱:۰۰ - ۱۱:۴۵</aside>
-                        <section>
-                            <h3>طراحی قالب واکنش‌گرا و استفاده از گرید فریم‌ورک‌های موجود جهت طراحی واکنش‌گرا</h3>
-                            <h4>شاهو طوفانی</h4>
-                            <p>در این ارائه به متدهای طراحی واکنش‌گرا با تاکید بر استفاده از سیستم های مبتنی بر گرید پرداخته می‌‌شود که شامل طراحی شناور (<span>Fluid-based Design</span>)، مفاهیم گرید، گریدهای ریسپانسیو و  استفاده از سیستم گرید فریم‌ورک های شناخته شده مانند <span>Bootstrap،</span> <span>Foundation‌</span> و ... خواهد بود.</p>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/naser.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۴:۰۰ - ۱۴:۳۰</span>
+                                <h4 class="head-type-2 smaller bold">سید ناصر حسنی</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight">سوپر ریسپانسیو</h3>
+                                <p class="txtParagraph small">بسیار ناامیدکننده است که وقتی یک وب‌سایتی براساس اصول طراحی واکنش‌گرا دوباره طراحی و پیاده سازی می‌شود، مجبور می‌شویم تا چند دقیقه به یک صفحه سفید خیره شویم.
+                                به همین دلیل قرار بر آن است که از عملکردهایی گفته شود که در این ارائه کمک کنند تا زودتر محتوای واکنش‌گرا را به کاربر نهایی برسانند و در عین حال یک وب‌سایت واکنش‌گرا داشته باشیم.</p>
+                                <a href="https://slides.com/snh/super-rwd-conf/" class="btn-dl txtParagraph small" target="_blank">
+                                    <i class="fa fa-download"></i>نمایش ارائه
+                                </a>                                  
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۱۱:۴۵ - ۱۲:۳۰</aside>
-                        <section>
-                            <h3>استفاده از <span>Flexbox</span> در طراحی واکنش‌گرا</h3>
-                            <h4>آرش میلانی</h4>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/arash.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۴:۳۰ -۱۵:۰۰</span>
+                                <h4 class="head-type-2 smaller bold">آرش منطقی</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight">اهمیت استایل‌نویسی حیاتی در <span class="dataDesc" data-description="Responsive Design">طراحی واکنش‌گرا</span></h3>
+                                <p class="txtParagraph small">
+                                    هرچند سال‌ها از دوره‌ای که استایل‌ها را به صورت اینلاین می نوشتیم گذشته است، اما شاید بد نباشد باز هم نیم‌نگاهی به مزیت‌های روش‌های پیشین داشته باشیم. ایده ارائه شده در این روش جداسازی استایل‌های حیاتی از آن دسته ازاستایل‌های غیرحیاتی است که در گام های بعدی هم می توان به آن رسیدگی کرد. اگر بتوانیم استایل‌های حیاتی را هرچه سریع‌تر برای پردازش در اختیار مرورگر قرار دهیم، می توانیم صرفه جویی در زمان را برای کاربر به ارمغان آوریم. در ادامه به اهمیت این روش در طراحی‌های واکنش‌گرا خواهیم پرداخت و با چالش‌های پیاده‌سازی آن آشنا خواهیم شد و در نهایت راه کارهایی را برای استفاده‌ کاربردی از این روش معرفی خواهیم کرد.  
+                                </p>
+                                <a href="http://www.slideshare.net/WSSchool/ss-56467227" class="btn-dl txtParagraph small" target="_blank">
+                                    <i class="fa fa-download"></i>نمایش ارائه
+                                </a>                                  
+                            </div>
+                        </section>
+                    </article> 
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img class="iconTimeline" src="static/img/schedule/coffee.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۵:۰۰ - ۱۵:۳۰</span>
+                                <h4 class="head-type-2 smaller bold">استراحت</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight">استراحت</h3>
+                                <p class="txtParagraph small">نسکافه و چای میل کنید تا برای ادامه ی همایش  انرژی کافی داشته باشید. ;)</p>
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۱۲:۳۰ - ۱۲:۴۵</aside>
-                        <section class="dim">
-                            <h3>استراحت</h3>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/kazem.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۵:۳۰ - ۱۶:۰۰</span>
+                                <h4 class="head-type-2 smaller bold">کاظم کشاورز</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight">روشهای نوین بررسی سرعت عملکرد <span class="dataDesc" data-description="User Interface">رابط‌کاربری</span> در نسخه‌ی موبایل</h3>
+                                <p class="txtParagraph small">
+                                    این روزها اغلب وب‌سایت‌ها واکنش‌گرا طراحی می‌شوند، بدین معنی که رابط‌کاربری طراحی شده برای دسکتاپ در اندازه‌ی صفحه‌ی موبایل و تبلت نیز قابل استفاده است، اغلب اوقات رابط‌کاربری برای مرورگر دسکتاپ بهینه‌سازی شده و در نسخه‌ی موبایل عملکرد ضعیف‌تری از خود نشان می‌دهد، بدین ‌منظور به ابزارهای مختلفی برای بهینه‌سازی رابط‌کاربری در نسخه‌ی موبایل توسط مرورگرها تعبیه شده‌اند.  
+                                </p>
+                                <a href="http://www.slideshare.net/WSSchool/ss-56467312" class="btn-dl txtParagraph small" target="_blank">
+                                    <i class="fa fa-download"></i>نمایش ارائه
+                                </a>                                
+                            </div>
                         </section>
                     </article>
-                    <article class="schedule__row">
-                        <aside>۱۲:۴۵ - ۱۳:۰۰</aside>
-                        <section>
-                            <h3>سخنرانی مبین‌نت</h3>
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/farid.jpg"  alt="">
+                            <aside>
+                                <span class="txtSpan">۱۶:۰۰ - ۱۶:۳۰</span>
+                                <h4 class="head-type-2 smaller bold">فرید ارض پیما</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight"><span class="dataDesc" data-description="Hybrid">هیبرید</span> کارا، از رویا تا واقعیت!</h3>
+                                <p class="txtParagraph small">
+                                </p>
+                            </div>
                         </section>
-                    </article>
-                    <article class="schedule__row">
-                        <aside>۱۳:۰۰ - ۱۳:۴۵</aside>
-                        <section>
-                            <h3>تجربه کاربری و استراتژی محتوی در طراحی واکنش‌گرا</h3>
-                            <h4>پرهام باغستانی</h4>
+                    </article> 
+                    <article class="timeline__row">
+                        <header class="grid-row col-self-set-on-third">
+                            <span class="lineDot"></span>
+                            <img src="static/img/people/unknown.jpg" alt="">
+                            <aside>
+                                <span class="txtSpan">۱۶:۳۰ - ۱۷:۰۰</span>
+                                <h4 class="head-type-2 smaller bold">سخنرانی</h4>
+                            </aside>
+                        </header>
+                        <section class="dim row__one grid-row col-self-set-two-third">
+                            <div class="inner-dim">                            
+                                <h3 class="head txtRight">سخنان پایانی و اختتامیه</h3>
+                                <p class="txtParagraph small">
+                                    
+                                </p>
+                            </div>
                         </section>
-                    </article>
-                    <article class="schedule__row">
-                        <aside>۱۳:۴۵ - ۱۵:۰۰</aside>
-                        <section class="dim">
-                            <h3>ناهار و استراحت</h3>
-                        </section>
-                    </article>
-                    <article class="schedule__row">
-                        <aside>۱۵:۰۰ - ۱۵:۴۵</aside>
-                        <section>
-                            <h3>راه‌های بهینه‌سازی و استفاده از تصاویر در طراحی واکنش‌گرا</h3>
-                            <h4>امیر سروری</h4>
-                            <p>تکتولوژی ها مدرن در طراحی وب ،در جهت بهبود ارائه مناسب محتوا به مخاطبان پیشرفت می کنند. محتوا مهمترین قسمت از هر وب سایت است و تصاویر یکی از مهمترین انواع محتوا. طراحی ریسپانسیو به بهبود ارائه محتوا بسیار کمک خواهد کرد بنابراین بهینه سازی تصاویر برای طراحی ریسپانسیو نیز بسیار مهم خواهد بود . سایز ، حجم ، کانسپت های طراحی، پشتیبانی مرورگرها و دستگاه های متفاوت همگی در جهت بهینه سازی در استفاده تصاویر برای طراحی ریسپانسیو نقش خواهند داشت که در این ارائه به این موارد خواهیم پرداخت.</p>
-                        </section>
-                    </article>
-                    <article class="schedule__row">
-                        <aside>۱۵:۴۵ - ۱۶:۰۰</aside>
-                        <section>
-                            <h3>سخنرانی سرزمین هوشمند</h3>
-                        </section>
-                    </article>
-                    <article class="schedule__row">
-                        <aside>۱۶:۰۰ - ۱۶:۳۰</aside>
-                        <section>
-                            <h3>تایپوگرافی در طراحی واکنش‌گرا</h3>
-                            <h4>سالار کابلی</h4>
-                        </section>
-                    </article>
+                    </article> 
                 </section>
 
             </section>
         </section>
-        <svg class="bigTriangle white-to-light-gray" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-            <path d="M0 0 L50 100 L100 0 Z" />
-        </svg>
         <!-- /Schedule -->
 
         <!-- Location -->
         <section class="section section--location" id="location">
             <section class="wrapper">
-                <header class="section-header">
-                    <h1><i class="fa fa-map-marker"></i> محل برگزاری</h1>
-                    <h3>اولین همایش تخصصی طراحی واکنش‌گرا</h3>
+                <header class="section-header border--bottom">
+                    <h1 class="head-type-2 large txtCenter"><i class="fa fa-map-marker"></i> محل برگزاری</h1>
+                    <h3 class="head medium txtCenter">دومین همایش تخصصی طراحی واکنش‌گرا</h3>
                 </header>
 
-                <p>تهران، خیابان کارگر شمالی، بالاتر از بزرگراه جلال آل احمد، خیابان شانزدهم (شهید فرشی مقدم)، پارک علم و فن آوری دانشگاه تهران</p>
+                <p class="txtParagraph">تهران - خیابان حافظ - پایین تر از خیابان طالقانی- دانشگاه صنعتی امیرکبیر - سالن اجتماعات مرکزی</p>
             </section>
         </section>
-
         <!-- /Location -->
 
         <!-- Map -->
-        <section class="section--map">
-            <svg class="bigTriangle light-gray-to-nothing" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-                <path d="M0 0 L50 100 L100 0 Z" />
-            </svg>
-            <svg class="bigTriangle bigTriangle__bottom nothing-to-white" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 850 100" preserveAspectRatio="none">
+        <section class="section--map" id="map-location">
+            <svg class="bigTriangle bigTriangle__bottom map-to-white" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 850 100" preserveAspectRatio="none">
                 <polygon points="0,0 0,100 425,100 850,100 850,0 425,100 "/>
             </svg>
-            <div class="map-container"></div>
+            <div id="map"class="map-container"></div>
         </section>
         <!-- /Map -->
 
         <!-- Sponsors -->
-        <section class="section section--sponsors" id="sponsors">
+        <section class="section section--sponsors col-set-one-half tablet-col-set-half col-set-phone-full" id="sponsors">
             <section class="wrapper">
-                
-                <header class="section-header">
-                    <h1><i class="fa fa-heart"></i> حامیان</h1>
-                    <h3>این همایش با یاری این دوستان امکان‌پذیر شده است.</h3>
+                <header class="section-header border--bottom">
+                    <h1 class="head-type-2 large txtCenter"><i class="fa fa-heart"></i> حامیان</h1>
+                    <h3 class="head medium txtCenter">برگزاری همایش با یاری این دوستان امکان‌پذیر شده است.</h3>
                 </header>
-
-                <section class="sponsor-list">
-                    <a href="http://mobinnet.ir" target="_blank"><img src="static/img/sponsors/mobinnet.svg" alt="مبین‌نت" class="size-xl-v"></a>
-                    <a href="http://majidonline.com" target="_blank"><img src="static/img/sponsors/majidonline-black.svg" alt="مجیدآنلاین" class="size-l-v"></a>
-                    <a href="http://www.ut.ac.ir" target="_blank"><img src="static/img/sponsors/ut.svg" alt="دانشگاه تهران" class="size-xl-v"></a>
-                    <a href="http://stp.ut.ac.ir" target="_blank"><img src="static/img/sponsors/ut-stp.svg" alt="پارم علم و فناوری دانشگاه تهران" class="size-xl-v"></a>
+                 
+                <section class="sponsor-list-commercial">
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://majidonline.com" target="_blank">
+                                <img src="static/img/sponsors/majidonline.jpg" alt="مجیدآنلاین" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">مجیدآنلاین</b>
+                                    <span class="txtSpan smaller">حامی راهبردی</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article> 
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://artimanstudio.com" target="_blank">
+                                <img src="static/img/sponsors/artiman.jpg" alt="موسسه طراحان و ایده‌پردازان آرتیمان" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">موسسه طراحان و ایده‌پردازان آرتیمان</b>
+                                    <span class="txtSpan smaller">حامی راهبردی</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>                         
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://www.aut.ac.ir/" target="_blank">
+                                <img src="static/img/sponsors/daneshkade-computer.jpg" alt="دانشکده ریاضی و علوم کامپیوتر" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">دانشکده ریاضی و علوم کامپیوتر</b>
+                                    <span class="txtSpan smaller">حامی راهبردی</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://www.aut.ac.ir/" target="_blank">
+                                <img src="static/img/sponsors/anjoman-dashejoei.jpg" alt="دانشگاه صنعتی امیرکبیر" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">دانشگاه صنعتی امیرکبیر</b>
+                                    <span class="txtSpan smaller">حامی راهبردی</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>                                                                  
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://avatech.ir/" target="_blank">
+                                <img src="static/img/sponsors/avatech.jpg" alt="آواتک" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">آواتک</b>
+                                    <span class="txtSpan smaller">حامی راهبردی</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article> 
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://asiatech.ir/" target="_blank">
+                                <img src="static/img/sponsors/asiatech.jpg" alt="آسیاتک" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">آسیاتک</b>
+                                    <span class="txtSpan smaller">حامی تجاری</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article> 
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://ponisha.ir/" target="_blank">
+                                <img src="static/img/sponsors/ponisha.jpg" alt="پونیشا" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">پونیشا</b>
+                                    <span class="txtSpan smaller">حامی تجاری</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="https://anetwork.ir" target="_blank">
+                                <img src="static/img/sponsors/anetwork.jpg" alt="ای‌نتورک" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">ای‌نتورک</b>
+                                    <span class="txtSpan smaller">حامی تجاری</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://alibaba.ir" target="_blank">
+                                <img src="static/img/sponsors/alibaba.jpg" alt="علی‌بابا" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">علی‌بابا</b>
+                                    <span class="txtSpan smaller">حامی تجاری</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://www.sigma.ir/" target="_blank">
+                                <img src="static/img/sponsors/sigma.jpg" alt="سیگما" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">شرکت سیگما</b>
+                                    <span class="txtSpan smaller">حامی تجاری</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item larg">
+                        <figure>
+                            <a href="http://delion.ir/" target="_blank">
+                                <img src="static/img/sponsors/delion.jpg" alt="دلیون" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">دلیون</b>
+                                    <span class="txtSpan smaller">حامی تجاری</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>                                                                                       
                 </section>
 
+                <section class="sponsor-list-commercial media">
+                    <header class="section-header header--sponsers">
+                        <h4 class="head medium txtCenter">حامیان رسانه ای</h4>
+                    </header> 
+                    <article class="sponser--item media">
+                        <figure>
+                            <a href="http://www.eranico.com" target="_blank">
+                                <img src="static/img/sponsors/eranico.jpg" alt="ارانیکو" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">ارانیکو</b>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>                     
+                    <article class="sponser--item media">
+                        <figure>
+                            <a href="http://parscoders.com/" target="_blank">
+                                <img src="static/img/sponsors/parscoders.jpg" alt="پونیشا" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">پارسکدرز</b>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>    
+                    <article class="sponser--item media">
+                        <figure>
+                            <a href="http://barsam.ir/" target="_blank">
+                                <img src="static/img/sponsors/barsam.jpg" alt="برسام" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">برسام</b>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item media">
+                        <figure>
+                            <a href="http://obenmagazine.com" target="_blank">
+                                <img src="static/img/sponsors/obenmagazine.jpg" alt="obenmagazine" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">مجله ابن</b>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item media">
+                        <figure>
+                            <a href="http://techera.ir" target="_blank">
+                                <img src="static/img/sponsors/techera.jpg" alt="تکرا" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">تکرا</b>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item media">
+                        <figure>
+                            <a href="http://webna.ir/" target="_blank">
+                                <img src="static/img/sponsors/webna.jpg" alt="وبنا" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">وبنا</b>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item media">
+                        <figure>
+                            <a href="http://mandegarweb.com/" target="_blank">
+                                <img src="static/img/sponsors/mandegarweb.jpg" alt="ماندگاروب" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">ماندگار وب</b>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>
+                    <article class="sponser--item media">
+                        <figure>
+                            <a href="http://www.irib.ir/" target="_blank" title="صدا و سیمای جمهوری اسلامی ایران">
+                                <img src="static/img/sponsors/sedavasima.jpg" alt="صدا و سیمای جمهوری اسلامی ایران" class="size-xl-v">
+                                <figcaption >
+                                    <b class="head-type-2 smaller bold">صدا و سیما</b>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </article>                                                                              
+                </section>                
             </section>
-        </section>
-        <svg class="bigTriangle white-to-green invert-side-nav" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-            <path d="M0 0 L50 100 L100 0 Z" />
-        </svg>
+        </section>  
         <!-- /Sponsors -->
 
-        <!-- Organizers -->
-        <section class="section section--people section--organizers" id="organizers">
-            <section class="wrapper">
-                
-                <header class="section-header">
-                    <h1><i class="fa fa-cogs"></i> برگزارکنندگان</h1>
-                    <h3>این همایش را چه کسانی برگزار می‌کنند.</h3>
-                </header>
-
-                <section class="grid-wrap col-set-one-third phone-col-set-full">
-                    <a href="http://ir.linkedin.com/pub/majid-alavizadeh/11/751/42" class="grid-col" target="_blank">
-                        <img src="static/img/people/majid.jpg" alt="مجید علوی‌زاده">
-                        <h2>مجید علوی‌زاده</h2>
-                        <h3>دبیر کنفرانس</h3>
-                    </a>
-                    <a href="http://linkedin.com/in/sallarkaboli" class="grid-col" target="_blank">
-                        <img src="static/img/people/sallar.jpg" alt="سالار کابلی">
-                        <h2>سالار کابلی</h2>
-                        <h3>دبیر علمی</h3>
-                    </a>
-                    <a href="http://ir.linkedin.com/pub/saber-vanaki/7a/2b/a25" class="grid-col" target="_blank">
-                        <img src="static/img/people/saber.jpg" alt="صابر ونکی">
-                        <h2>صابر ونکی</h2>
-                        <h3>دبیر اجرایی</h3>
-                    </a>
-                </section>
-
-            </section>
-        </section>
-        <svg class="bigTriangle green-to-dark-gray" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+        <svg class="bigTriangle milk-to-white invert-side-nav" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
             <path d="M0 0 L50 100 L100 0 Z" />
         </svg>
+
+        <!-- Organizers -->
+        <section class="section--organizers" id="organizers">
+            <section class="wrapper">
+                <header class="section-header border--bottom">
+                    <h1 class="head-type-2 large txtCenter"><i class="fa fa-cogs"></i> برگزارکنندگان</h1>
+                    <h3 class="head medium txtCenter">این همایش را چه کسانی برگزار می‌کنند.</h3>
+                </header>
+
+                <section class="pic--organizers">
+                    <article  class=" organizers--item">
+                        <a href="http://wsschool.org" target="_blank">
+                            <img src="static/img/organizers/wsschool_logo.png" data-at2x="static/img/organizers/wsschool_logo@2x.png" alt="مدرسه استانداردهای وب">
+                        </a>                        
+                    </article>
+                    <article class="wrapper teamMembers">
+                        <a href="team-members.html" target="_blank" class="txtParagraph smaller team-members">معرفی تیم اجرایی همایش</a>
+                    </article>
+                </section>
+            </section>
+            <footer class="wrapper">
+                <div class="organizers--info">
+                    <h4 class="organizers--info-title head-type-2 bold small">تماس با دبیرخانه:</h4>
+                    <p class="txtParagraph small">
+                        تهران، میدان فاطمی، میدان گلها، خیابان کاج جنوبی، پلاک ۴۰
+                        <br>تلفن دبیرخانه: ۸۸۹۸۵۰۳۰-۰۲۱
+                        <br>نمابر دبیرخانه: ۸۸۹۸۰۸۹۵-۰۲۱</p>
+                    <h4 class="organizers--info-title head-type-2 bold small">ایمیل دبیرخانه:</h4>
+                    <p  class="txtParagraph"><a href="mailto:contact@wsschool.org">contact@wsschool.org</a></p>
+                </div>
+            </footer>
+        </section>
         <!-- /Organizers -->
 
         <!-- Footer -->
         <footer class="section section--footer">
             <section class="wrapper">
                 <p>
-                    ما را در <a href="https://twitter.com/wsschool_org" target="_blank"><i class="fa fa-twitter"></i></a> دنبال کنید.<br>
-                    کپی‌رایت ۱۳۹۲. مدرسه استانداردهای وب، تحت حمایت <a href="http://majidonline.com" target="_blank">مجید آنلاین</a> فعالیت می‌کند. <a href="mailto:rwdconf@wsschool.org">تماس</a>.<br>
-                </p>
-                    <hr>
-                <p class="small">
-                    <a href="http://sallar.me" target="_blank">
-                        طراحی: سالار کابلی
-                    </a>
+                    <span class="addmargin txtParagraph">
+                        ما را در شبکه های اجتماعی دنبال کنید.
+                    </span> 
+                    <!-- Social -->
+                    <section class="section section--social">
+                        <section class="social">
+                            <section class="wrapper">
+                                <ul class="socialList">                     
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/web-standards-school" class="social--linkedin" target="_blank"> 
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://facebook.com/wsschool" class="social--facebook" target="_blank"> 
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social--twitter" data-twitter2="از هش‌تگ #RWDConf94 در شبکه‌های اجتماعی استفاده کنید.">                            
+                                        <a href="https://twitter.com/intent/tweet?hashtags=RWD94&amp;via=wsschool_org" class="tw-ico" target="_blank"> 
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://instagram.com/wsschool_org" class="social--instagram" target="_blank"> 
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.aparat.com/wsschool" class="social--aparat" target="_blank"> 
+                                            <i class="fa ico svg-aparat"></i>
+                                        </a>
+                                    </li>
+                                </ul>                     
+                            </section>
+                        </section>            
+                    </section>       
+                    <!-- /Social -->
+                    <span class="addmargin txtParagraph small bold">
+                       کپی‌رایت ۱۳۹۴. مدرسه استانداردهای وب
+                    </span>
+                    <span class="addmargin txtParagraph small bold">
+                      طراحی : <a href="http://mekaeil.me" title="Front-End Developer">میکائیل اندیشه</a>
+                            | 
+                            <a href="https://github.com/Mekaeil/rwd-conf-94" class="social--github" target="_blank"> 
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="https://ir.linkedin.com/in/mekaeil-andisheh-90664071" class="social--linkedin" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                    </span>                    
+                    <span class="logoFooter">
+                        <a href="http://wsschool.org/" target="_blank">
+                            <img src="static/img/organizers/small_logo.png" alt="مدرسه استانداردهای وب">
+                        </a>
+                    </span>
                 </p>
             </section>
         </footer>
         <!-- /Footer -->
-
-
     </section>
     <!-- /Main Wrapper -->
-
-    <!-- Side Nav -->
-    <nav class="side-nav">
-        <a href="#" class="toggle"><i class="fa fa-reorder"></i></a>
-        <section class="inner">
-            <a href="#intro" class="active"><span>معرفی</span></a>
-            <a href="#speakers"><span>سخنران‌ها</span></a>
-            <a href="#schedule"><span>برنامه</span></a>
-            <a href="#location"><span>محل برگزاری</span></a>
-            <a href="#sponsors"><span>حامیان</span></a>
-            <a href="#organizers"><span>برگزارگنندگان</span></a>
-        </section>
-    </nav>
-    <!-- /Side Nav -->
 
     <!-- IE Notice -->
     <div class="ie-notice">
@@ -385,9 +1186,19 @@
     <!-- /IE Notice -->
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="static/js/jquery.min.js"></script>
+     <!-- MAP -->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
     <script src="static/js/vendor/jquery.gomap.min.js"></script>
+    <!-- Custom Script -->
     <script src="static/js/app.js"></script>
+    <!-- Retina -->
+    <script type="text/javascript" src="static/js/retina.min.js"></script>
+    <!-- Timer -->
+    <script src="static/js/timer.js"></script>
+    <script type="text/javascript">
+        var confDate = "December 24, 2030 08:00:00"
+    </script>  
+ 
 </body>
 </html>

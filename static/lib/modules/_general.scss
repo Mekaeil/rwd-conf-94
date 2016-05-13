@@ -1,0 +1,446 @@
+/*============================================================================================*/
+/*----------------------------------------Generallr-------------------------------------------*\
+/*============================================================================================*/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*-------------------*\
+    Variables
+\*-------------------*/
+//Colors
+$background : #FAFAFA;
+$green      : #00ae9c;
+// $green-dark: #1d5842;
+$green-dark : darken($green, 12%);
+$gray-darker: #191919;
+$gray-dark  : darken(#62676b, 5%);
+$gray       : lighten($gray-dark, 15%);
+$gray-light : lighten($gray, 35%);
+//$milk: darken(#F3F2EF, 1%);
+$milk       : #F3F2EF;
+$blue       : #004d76;
+
+//Red
+$red            :rgba(18, 76, 76, 1);//rgb(254, 54, 76);
+$red-overlay    :  rgba(18, 76, 76,0.85);//rgba(254, 54, 76, 0.85);
+$red-dark       : darken($red, 12%);//darken($red, 12%);
+
+// Blue and green
+$bgColor            : rgba(18, 76, 76, 1);
+$bgColor-overlay    : rgba(18, 76, 76,0.85);
+$bgColor-overlay    : darken($bgColor, 12%);
+
+
+$desktop-bp : 65em;
+$tablet-bp  : 55em;
+$phone-bp   : 35em;
+/*-------------------------*\
+        Mixins
+\*-------------------------*/
+@mixin responsive($size){
+    @if $size == desktop {
+        @media all and (max-width: $desktop-bp){
+            @content;
+        }
+    }//desktop
+    @if $size == tablet {
+        @media all and (max-width: $tablet-bp){
+            @content;
+        }
+    }//tablet
+    @if $size == phone {
+        @media all and (max-width: $phone-bp){
+            @content;
+        }
+    }//phone
+    @else {
+        @media all and (max-width : $size){
+            @content;
+        }
+    }//else!
+}//responsive
+
+@mixin grayscale {
+    -webkit-filter  : grayscale(95%);
+    -moz-filter     : grayscale(95%);
+    -ms-filter      : grayscale(95%);
+    -o-filter       : grayscale(95%);
+    filter          : grayscale(95%);
+    filter          : url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0\'/></filter></svg>#grayscale");
+    filter          : gray;
+    -webkit-backface-visibility : hidden;
+}
+
+@mixin grayscale-none(){
+    -webkit-filter  : none;
+    -moz-filter     : none;
+    -ms-filter      : none;
+    -o-filter       : none;
+    filter          : none;
+}
+/*---------------------*\
+       Includes
+\*--------------------*/
+@import "../vendor/bourbon/bourbon";
+@import "../vendor/normalize";
+@import "../vendor/font-awesome/font-awesome";
+
+@import "../vendor/proportional-grids";
+@import "_grids";
+@import "_separators";
+
+/*----------------------*\
+             Fonts
+\*----------------------*/
+@include font-face(Roya, '../fonts/Roya-Regular');
+@include font-face(Roya, '../fonts/Roya-Bold', bold);
+@include font-face(OpenSans, '../fonts/OpenSans');
+
+// Please purchase this font license :‌IRANSANS  : http://fontiran.com/
+@include font-face(iransans, '../fonts/iransans');
+@include font-face(iransans-light, '../fonts/iransans-light');
+
+/*---------------------*\
+    General
+\*---------------------*/
+html, body{
+    height : 100%;
+    padding: 0;
+}
+
+html{
+    font : 1em/1.5 iransans-light, OpenSans, sans-serif;
+    color: #444;
+    background-color: $background;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    .ie-notice{
+        display: none;
+    }
+    &.ie{
+        .ie-notice{
+            display: block;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: $gray-darker;
+            z-index: 1000;
+            direction: rtl;
+            color: $gray-light;
+            text-align: center;
+
+            .inner{
+                width: 700px;
+                height: 150px;
+                position: fixed;
+                top: 50%; left: 50%;
+                margin: -75px 0 0 -350px;
+            }
+
+            h1, h2{
+                line-height: 1.8;
+                margin: 0;
+            }
+        }
+    }//&.ie
+    &.touch{
+        .masthead{
+            min-height: 100vh;
+            position: relative;
+        }
+        .main-wrapper{
+            top: 0;
+        }
+    }//&.touch
+}//body
+/****/
+.section-header{
+    margin-bottom: 1em;
+    &.border--bottom{
+        border-bottom  : 1px solid lighten($red,30%);
+        padding-bottom : 1em;
+    }
+
+    h1{
+        color       : darken($red, 5%);
+        text-align  : center;
+        direction   : rtl;
+    }
+    h2, h3{
+        letter-spacing  : -1px;
+        color           : $gray-dark;
+        direction       : rtl;
+    }
+}
+p{
+    margin  : 0 0 1em;
+}
+li{
+    list-style-type: none;
+}
+.bold{
+    font-weight : bold;
+    font-size   : 1.2em;    
+}
+*{
+    @include box-sizing(border-box);
+}
+figure{
+    margin      : 0;
+    padding     : 0;
+    text-align  : center;
+
+    img{
+        max-width   : 100%;
+        height      : auto;
+    }
+}
+hr{
+    border       : 0;
+    margin       : 3em 0;
+    border-bottom: 1px solid lighten($gray-light, 5%);
+}
+.btn{
+    text-decoration : none;
+    color           : #fff;
+    background-color: $red;
+    display         : inline-block;
+    padding         : 0 1em;
+    font-weight     : bold;
+    overflow        : hidden;
+    border-radius   : .2em;
+    @include transition(background-color 300ms ease);
+    i{
+        position        : relative;
+        bottom          : -0.25em;
+        vertical-align  : middle;
+    }
+
+    &:hover{
+        background-color: darken($red, 10%);
+    }
+
+    @include responsive(phone){
+        display     : block;
+        text-align  : center;
+    }
+}
+.section:not(.section--footer) a {
+    transition: all 0.5s;
+    &.social--twitter:hover, i.fa-twitter:hover{
+        color : #0e91c6 !important;
+    }
+    &.social--facebook:hover,i.fa-facebook:hover{
+        color : #376099 !important;
+    }
+    &.social--linkedin:hover, i.fa-linkedin:hover{
+        color : #4278be !important;
+    }
+    &.social--instagram:hover,i.fa-instagram:hover{
+        color : $gray !important;
+    }
+    &.social--aparat:hover,i.svg-aparat:hover{
+        color : #c82328 !important;
+        i{
+            &:before{
+                @include grayscale-none;
+            }
+        }
+    }                   
+}  
+i.ico{
+    &.svg-css{
+        &::before{
+            background: url("../img/icons/style.svg") 0 0 no-repeat;
+            background-size: 70% !important;
+        }
+    }//css
+    &.svg-typography{
+        &::before{
+            background: url("../img/icons/typography.svg") 0 0 no-repeat;
+            background-size: 60% !important;
+        }
+    }//typography
+    &.svg-nav{
+        &::before{
+            background: url("../img/icons/navigation.svg") 0 0 no-repeat;
+            background-size: 70% !important;
+        }
+    }//nav
+    &.svg-think{
+        &::before{
+            background: url("../img/icons/think.svg") 0 0 no-repeat;
+            background-size: 80% !important;
+        }
+    }//think
+    &.svg-idea{
+        &::before{
+            background: url("../img/icons/idea.svg") 0 0 no-repeat;
+            background-size: 90% !important;
+        }
+    }//idea
+    &.svg-strategy{
+        &::before{
+            background: url("../img/icons/strategy.svg") 0 0 no-repeat;
+            background-size: 90% !important;
+        }  
+    }//strategy  
+    &.svg-telegram{
+        display     : inline-block  !important;
+        line-height : 2.5;
+        padding     : 1em 0.5em;
+        position    : absolute;
+        right       : 0;
+        top         : 18%;        
+        &::before{
+            @include grayscale();
+            width           : 25px;
+            height          : 28px;
+            position        : absolute;
+            right           : 0;
+            top             : 0;
+            display         : inline-block !important;
+            background      : url("../img/icons/telegram.svg") 0 0 no-repeat;
+            background-size : 90% !important;
+            @include responsive(768px){
+                background-size : 55%  !important;
+                background-position : 5px 0;
+            }
+        }  
+    }//telegram
+    &.svg-aparat{
+        display: inline-block  !important;
+        height     : 100%;
+
+        &::before{
+                @include grayscale();
+                display         : inline-block !important;
+                background      : url("../img/icons/aparat.svg") 20px 5px no-repeat;
+                background-size : 64% !important;
+                position        : absolute;
+                top             : 0;
+                height          : 100%;
+                @include responsive(tablet){
+                    background: url("../img/icons/aparat.svg") 35px 0px no-repeat;
+                    background-size: 38% !important;
+                }
+        }  
+    }//aparat  
+    &::before{
+        content: "";
+        display: block;
+        width: 60px;
+        height: 60px;     
+    }//before       
+}//i
+*{
+    &.Roya{
+       font-family: Roya, OpenSans, sans-serif; 
+    }    
+}
+
+/*---------------------*\
+        Wrapper
+\*---------------------*/
+.main-wrapper{
+    position        : relative;
+    top             : 100%;
+    z-index         : 0;
+    background-color: $background;
+    overflow-x      : hidden;
+    @include responsive(phone){
+        top: 0;
+    }
+}
+
+.wrapper{
+    width       : 55rem;
+    margin      : 0 auto;
+    font-size   : 1.2em;
+
+    @include responsive(desktop){
+        width: 50rem;
+    }
+
+    @include responsive(tablet){
+        width       : 100% !important;
+        padding     : 0 2em;
+        font-size   : 1em;
+    }
+
+    @include responsive(phone){
+        padding     : 0 1em;
+    }
+}
+
+.section{
+    padding     : 4em 0 5em;
+    direction   : rtl;
+    @include responsive(phone){
+        padding : 4em 0 1em;
+    }
+}
+/***** data description : tooltips ****/
+span.dataDesc{
+    border-bottom : 1px dotted $red;
+}
+[data-description] {
+  position  : relative;
+  z-index   : 2;
+  cursor    : help;
+}
+
+/* Hide the tooltip by default */
+[data-description]:before,
+[data-description]:after {
+  visibility    : hidden;
+  opacity       : 0;
+  pointer-events: none;
+  transition    : all 0.4s; 
+}
+/* Position tooltip above the element */
+[data-description]:before {
+  font-family       : OpenSans, sans-serif; 
+  content           : attr(data-description);
+  position          : absolute;
+  bottom            : 100%;
+  left              : 50%;
+  margin-bottom     : 5px;
+  margin-left       : -80px;
+  padding           : 7px;
+  width             : 150px;
+  border-radius     : 3px;
+  background-color  : #000;
+  background-color  : rgba($red,0.8);
+  color             : #fff;
+  text-align        : center;
+  font-size         : 0.85em;
+  line-height       : 1.5;
+}
+
+/* Triangle */
+[data-description]:after {
+  content       : " ";    
+  position      : absolute;
+  bottom        : 100%;
+  left          : 50%;
+  margin-left   : -5px;
+  width         : 0;
+  border-top    : 5px solid #000;
+  border-top    : 5px solid rgba($red,0.8);
+  border-right  : 5px solid transparent;
+  border-left   : 5px solid transparent;
+  font-size     : 0;
+  line-height   : 0;
+}
+
+/* Show tooltip on hover */
+[data-description]:hover:before,
+[data-description]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}

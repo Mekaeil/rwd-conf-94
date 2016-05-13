@@ -1,26 +1,8 @@
 /*------------------------------------------------------*\
-
      _ _ _ _____ _____ _____ _____ _____ _____ __      _____ _____ _____ 
     | | | |   __|   __|     |  |  |     |     |  |    |     | __  |   __|
     | | | |__   |__   |   --|     |  |  |  |  |  |__ _|  |  |    -|  |  |
     |_____|_____|_____|_____|__|__|_____|_____|_____|_|_____|__|__|_____|
-
-    (C) 2014 - Sallar Kaboli <sallar.kaboli@gmail.com>
-    Web Standards School <wsschool.org>.
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License along
-    with this program; if not, write to the Free Software Foundation, Inc.,
-    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 \*------------------------------------------------------*/
 
@@ -55,8 +37,6 @@ if( ie && ie < 9 ) {
 if( touch ) {
     $('body').addClass('touch');
 }
-
-
 /**
  * Add Map
  */
@@ -65,24 +45,73 @@ if( $('.map-container').length > 0 )
     var $map = $('.map-container'),
 
     mapOptions = {
-        zoom               : 8,
-        center             : new google.maps.LatLng(35.732766,51.389306),
-        mapTypeId          : google.maps.MapTypeId.ROADMAP,
-        zoom               : 16,
-        disableDefaultUI   : true,
-        scrollwheel        : false,
-        zoomControl        : true,
+        center                  : new google.maps.LatLng(35.70373821780,51.41098954741),
+        mapTypeId               : google.maps.MapTypeId.ROADMAP,
+        zoom                    : 15,
+        disableDefaultUI        : true,
+        scrollwheel             : false,
+        zoomControl             : false,
+        scaleControl            : false,
+        draggable               : false,  
+        scrollwheel             : false, 
+        disableDoubleClickZoom  : true,
         zoomControlOptions : {
-            style: google.maps.ZoomControlStyle.SMALL,
-            position: google.maps.ControlPosition.LEFT_TOP
-        }
+            style: google.maps.ZoomControlStyle.LARGE,
+            position: google.maps.ControlPosition.TOP_LEFT
+        }   
     },
 
-    map = new google.maps.Map($map[0], mapOptions),
-
-    marker = new google.maps.Marker({
-        position : new google.maps.LatLng(35.732766,51.389306),
+    iconMap = new google.maps.MarkerImage("http://conf.wsschool.org/rwd/static/img/pointer.png"),
+    map     = new google.maps.Map($map[0], mapOptions),
+    marker  = new google.maps.Marker({
+        position : new google.maps.LatLng(35.703728, 51.409689),
         map      : map,
-        title    : 'RWD Conference'
+        title    : 'RWD Conference',
+        icon     : iconMap
     });
 }
+
+
+$(document).ready(function(){
+    /***
+     Set Menu to Fix top
+    ***/
+    $(window).scroll(function () {
+        var $nav = $('.fixNav'),
+            $wrapper = $('.main-wrapper'),
+            wOffset = $wrapper.offset();
+        if ($(this).scrollTop() > (wOffset.top) )
+        {
+            $nav.addClass("goToFix");
+            //$nav.css('position','fixed');
+        }else{
+            $nav.removeClass("goToFix");
+            // $nav.css('position','absolute');
+        }
+    });
+    /****
+    Animate Scroll Menu
+    ***/
+    $('a[href^="#"]').click(function(){
+        var element = $(this).attr('href'),
+            offset  = $(element).offset().top;
+
+        $('html,body').animate({scrollTop: offset}, 1000, 'swing');
+       return false;
+    });
+
+    /***
+    Responsive Menu
+    ***/
+    $('#NavMobile').bind('click', function(){
+        if($(this).hasClass('is-active')){
+            $(this).removeClass('is-active');
+            $('.fixNav ul').removeClass('is-open');
+        }
+        else{
+            $(this).addClass('is-active');
+            $('.fixNav ul').addClass('is-open');
+        }
+    });
+
+});        

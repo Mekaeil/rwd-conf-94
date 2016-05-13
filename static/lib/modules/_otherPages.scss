@@ -1,0 +1,260 @@
+/*============================================================================================*/
+/*--------------------------------------Other Page -------------------------------------------*\
+/*============================================================================================*/
+/*--------------------*\
+        Register
+\*--------------------*/
+.section--finalRegister{
+    position        : absolute;
+    top             : 20%;
+    left            : 10%;
+    transform       : translate(-35%,-15%);
+    background      : #fff !important;
+    width           : 30%; 
+    margin-left     : 10%;
+    border-radius   : 5px;
+    box-shadow      : 0 0 16px -5px #000;
+    z-index         : 9999;
+    padding         : 1em 0 1em;
+    @include responsive(tablet){
+        width       : 50%;
+    }
+    @include responsive(phone){
+       transform    : translate(0,0);
+       width        : 75%;
+       top          : 1%;
+       left         : 0;
+       padding      : 0.5em;       
+    }    
+    i{
+        color       : $red;
+    }
+    div{
+        color         : $gray-dark;
+        text-align    : center; 
+        margin-bottom : 1em;
+    }
+    .border--bottom{
+        border-bottom : 1px solid $gray-light;
+        padding-bottom : 10px;
+    }
+    span{display:block;}
+    input{
+        position        : relative;
+        display         : inline-block;
+        border-radius   : 3px;  
+        width           : 75%; 
+        padding         : 8px 20px;
+        border          : 1px solid $gray-light;  
+        margin-top      : 10px;         
+        &.btn-register{
+            background      : $red;
+            border          : 1px solid #fff;
+            color           : #fff;
+            border-radius   : 5px;
+            transition      : all 0.5s;  
+            &:hover{
+                background  : darken($red,15%);
+            } 
+        }
+    }
+    div.backHome{
+        a{
+            text-decoration : none;
+            color : $red;
+        }
+    }    
+}//section--finalRegister
+
+.footer-register{
+    position : fixed;
+    width    : 100%;
+    bottom   : 0;
+    z-index  : 999;
+    .section--footer{
+        padding     : 1em 0 1em;
+    }  
+}//footer-register
+
+.payRegister{
+    direction: rtl;
+    header.section-header{
+        padding-top     : 10px;
+        background      : $red;
+        text-align      : center; 
+        margin-bottom   : 0;
+        h1{
+            @include hide-text;
+            width: 775px;
+            height: 290px;
+            margin: 0 auto;
+            text-align : center;
+            background: transparent url("../img/logo.svg") no-repeat scroll center;
+            background-size: 60%;
+        }
+        @include responsive(tablet){
+            @include transform(translate(0,-50%));
+            position: relative;
+            left: 0; 
+            top: 10%;
+            padding: 0 5%;
+            margin-top: 20%;
+
+            h1{
+                width: 100%;
+                background-size: 100%;
+            }
+        }
+        @include responsive(phone){
+            @include transform(translate(0,0));
+            padding: 1% 2%;
+            margin-top: 0;
+        }                       
+    }//header.section-header
+
+    .set-half-grid{
+        overflow: hidden;
+        position: relative;
+        .grid-half{
+            width : 48%;
+            float : right;
+            &:last-child{
+                float   : left;
+                padding : 10px;
+                &::before{
+                    content     : "";
+                    height      : 100%;
+                    position    : absolute;
+                    right       : 51%;
+                    top         : 0;
+                    width       : 1px;
+                    background  : $gray-light; 
+                    @include responsive(768px){
+                        display: none;
+                    }
+                }//before
+            }//last-child
+            @include responsive(768px){
+                float: none;
+                width : 100%;
+                display: block;
+            }
+        }//grid-half
+    }//set-half-grid
+
+    .register__bill{
+        width           : 100%;
+        margin          : 1em 0 1.2em;
+        border-radius   : 4px;
+        border          : 1px solid $gray-light;
+        border-right    : 1px solid $gray-light;
+        background      : #f9f9f9;
+        .ticket-receipt--head{
+            width           : 100%;
+            border-bottom   : 1px solid $gray-light;
+            overflow        : hidden;
+        }
+        .ticket-receipt--foot{
+            li{
+                padding-bottom : 3%;
+            }
+        }
+        ul{
+            padding : 0;
+            list-style-type: none;
+            display: block;
+            li.border--bottom-dashed{
+                border-bottom : 1px dashed $gray-light;
+                padding       : 5px 0;
+                padding       : 3px 10px;
+                overflow      : hidden;
+            }
+        }
+        header{
+            padding : 5px 10px;
+        }
+        .date{
+            float: left;
+            padding-top: 5px;
+        }
+        input.ticket-receipt--buy{
+            float           : left;
+            text-align      : center;
+            margin-bottom   : 15px;
+            padding         : 8px 20px;
+            background      : $red;
+            color           : #fff;
+            border          : 1px solid $gray-light;
+            border-radius   : 4px; 
+            transition      : all 0.5s; 
+            &:hover{
+                background : darken($red,10%);
+            }
+        }
+        .tryAgain{
+            clear: both;
+            a{
+                text-decoration : none;
+                color           : $red;
+            }              
+        }            
+    }//register__bill
+
+    .billingBg{
+        background : $milk;
+    }
+    .register__form{
+        width         : 100%;
+        margin        : 1em 0 15px;
+        border-radius : 4px;
+        form{
+            box-shadow  : 0 0 15px -5px #000;
+
+        } 
+        label{
+            width   : 37%;
+            display : inline-block;
+            @include responsive(640px){
+                display : block;
+                width   : 100%; 
+            }
+        }
+        input{
+            width   : 60%;
+            padding : 5px 10px;
+            border  : 1px solid $gray-light;
+            border-radius : 4px; 
+            @include responsive(640px){
+                width   : 100%; 
+            }            
+        } 
+        section.innerForm{ 
+            padding         : 1em;
+            border          : 1px solid lighten($gray,40%);
+            margin-top      : 1em;
+            border-radius   : 4px; 
+            h5{
+                margin    : 0 0 1em;
+                color     : $red;
+                // font-size : 1.5em; 
+            }
+        }               
+    }
+    input{
+        outline: none;
+        &.invalid{
+            border:1px solid #E00000;
+            box-shadow : 0 0 5px -2px #E00000;            
+        }
+    }
+    span.invalid-msg{
+        display      : block;
+    
+        color        : #E00000;
+        padding      : 5px 38% 0 0;
+    }
+    .section--footer{
+        padding      : 1em 0;
+    }
+    
+}//register__form
